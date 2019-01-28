@@ -25,6 +25,11 @@ public class FileDataReader implements DataReader {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
+        try {
+            bufferedReader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return dataForArray;
     }
 }
